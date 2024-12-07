@@ -5,3 +5,13 @@ export const colorScaleGender = d3
     .scaleOrdinal<string, string>()
     .domain(['Male', 'Female'])
     .range(["#4a58dd", "#bf3caf"]);
+
+export const colorScaleDiabetesDiagnosisStatus = d3
+    .scaleOrdinal<string, string>()
+    .domain(['Yes', 'No', 'Borderline'])
+    .range(["#e31a1c", "#a6cee3", "#666666"]);
+
+export const colorScaleExerciseLevel = d3
+    .scaleOrdinal<string, string>()
+    .domain(["No", "Vigorous"])
+    .range(["#75654D", "#F5A326"]);

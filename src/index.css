@@ -63,6 +63,10 @@ h2 {
   font-weight: 500;
 }
 
+text {
+  font-size: 16px;
+}
+
 .viz {
   width: 100%;
   height: auto;
@@ -72,13 +76,13 @@ h2 {
   text-align: left;
   margin-left: 3rem;
   margin-right: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0rem;
   font-size: 1rem;
 }
 
 .dashboard {
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
 }
 
 .wrapper {
@@ -87,12 +91,19 @@ h2 {
 
 .main {
   padding-top: 1rem;
-  padding-bottom: 10rem;
+  padding-bottom: 1rem;
 }
 
 .grid {
   display: grid;
   gap: 14px;
+}
+
+.left-pane,
+.right-pane {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .map-container,
@@ -121,13 +132,13 @@ h2 {
 .stat-card {
   align-items: center;
   justify-content: center;
-  height: 200px;
+  height: 335px;
 }
 
 .card .stat {
   font-size: 3rem;
   font-weight: 600;
-  color: #1ca4d9;
+  color: #474f53;
 }
 
 .labels text {
@@ -143,7 +154,16 @@ h2 {
 @media (min-width: 1024px) {
 
   .wrapper {
-    max-width: 100rem; /* 80rem */
+    max-width: 100%; /* 100rem */
+  }
+
+  .bar-chart-container {
+    grid-column: span 15 / span 15;
+  }
+
+  .bar-chart-age-vs-exercise-level {
+    grid-column: span 5 / span 5;
+    height: 100%;
   }
 
   .container {
@@ -155,7 +175,16 @@ h2 {
   }
 
   .card-participants-container {
-    grid-column: span 15 / span 15;
+    grid-column: span 5 / span 5;
+    height: 125px;
+  }
+
+  .donut-chart-container {
+    grid-column: span 5 / span 5;
+  }
+
+  .donut-chart-gender {
+    grid-column: span 5 / span 5;
   }
 
   .map-container {
@@ -174,8 +203,20 @@ h2 {
     grid-column: span 15 / span 15;
   }
 
+  .scatterplot-chart-blood-measures-vs-bmi {
+    grid-column: span 10 / span 10;
+  }
+
   .scatterplot-chart-waist-cirumference-vs-bmi {
     grid-column: span 15 / span 15;
+  }
+
+  .left-pane {
+    grid-column: span 10 / span 10;
+  }
+
+  .right-pane {
+    grid-column: span 5 / span 5;
   }
 }
 
